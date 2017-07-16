@@ -64,7 +64,7 @@ class Sudoku < Array
 
   def solved?(work_array)
     work_array.each do |i|
-      unless i.is_a?(Fixnum)
+      unless i.is_a?(Numeric)
         return false
       end
     end
@@ -134,9 +134,7 @@ class Sudoku < Array
     end
     @roster = initial_roster
     return false
-    print "No solution \n"
   end
-
 end
 
 # Converts the Sudoku format from https://www.sudoku-solutions.com to a compatible one.

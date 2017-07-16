@@ -5,6 +5,7 @@ b = convert_sudoku("8...2...4...9.6.....7.5.6...5.....6.1.6.3.2.8.4.....5...9.7.
 c = convert_sudoku("8.......7..27.83...7..9..4..4..7..9...86.51...1..3..5..8..4..2...35.94..5.......1")
 d = convert_sudoku("5..3.84....6.9..7.81.6.....7.8...1...5.....9...1...3.4.....5.32.7..3.8....32....6")
 e = convert_sudoku("..53.....8......2..7..1.5..4....53...1..7...6..32...8..6.5....9..4....3......97..")
+f = convert_sudoku(".................................................................................")
 
 start_a = Time.now
 a.solve
@@ -26,6 +27,10 @@ start_e = Time.now
 e.solve
 finish_e = Time.now
 
+start_f = Time.now
+f.solve
+finish_f = Time.now
+
 a.print_roster
 puts "Roster a: ",(finish_a - start_a)%60, "\n"
 b.print_roster
@@ -36,3 +41,5 @@ d.print_roster
 puts "Roster d: ",(finish_d - start_d)%60, "\n"
 e.print_roster
 puts "Roster e: ",(finish_e - start_e)%60, "\n"
+f.print_roster
+puts "Roster f: ",(finish_f - start_f)%60, "\n"
